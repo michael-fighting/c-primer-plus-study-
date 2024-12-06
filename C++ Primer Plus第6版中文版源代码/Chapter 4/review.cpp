@@ -53,4 +53,3 @@ int main(){
     cin >> size;
     int * dyn = new int[input];
     vector<int> dv(size);
-}
