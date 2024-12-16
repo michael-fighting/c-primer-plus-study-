@@ -37,7 +37,7 @@ int main(){
     };
     enum Response {
         No,
-        Yes,s
+        Yes,
         Maybe,
     };
     double ted;
