@@ -51,5 +51,7 @@ int main(){
     unsigned int size;
     cout << "Enter a positive interger: ";
     cin >> size;
-    int * dyn = new int[input];
+    int * dyn = new int[size];
     vector<int> dv(size);
+    
+}

@@ -1,12 +1,11 @@
-#include<stdio.h>
 #include<iostream>
+#include<stdio.h>
 #include<vector>
-#include<string>
 #include<array>
-
+using namespace std;
 
 int main(){
-    std::cout << (int *) "Home of the jolly bytes";
+    cout << (int *) "Home of the jolly bytes";
     struct fish
     {
         char type[20];
