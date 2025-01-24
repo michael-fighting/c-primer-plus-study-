@@ -24,9 +24,9 @@ int main()
 
 // display information on screen with cout
 
-    cout << fixed;
-    cout.precision(2);
-    cout.setf(ios_base::showpoint);
+    cout << fixed;  //指定浮点数以**固定小数点形式
+    cout.precision(2);  //设置输出浮点数时的小数点后有效位数。
+    cout.setf(ios_base::showpoint);  //强制在输出的浮点数中显示小数点，即使小数部分为零。
     cout << "Make and model: " << automobile << endl;
     cout << "Year: " << year << endl;
     cout << "Was asking $" << a_price << endl;
