@@ -1,17 +1,17 @@
 #include<iostream>
 using namespace std;
-const int strsize = 20;//¶¨ÒåÊı×é´óĞ¡
+const int strsize = 20;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡
  
-//¶¨ÒåBOP³ÉÔ±µÄĞÅÏ¢½á¹¹Ìå
+//ï¿½ï¿½ï¿½ï¿½BOPï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½á¹¹ï¿½ï¿½
 struct bop {
 public:
-	char fullname[strsize];//ÕæÊµĞÕÃû
-	char title[strsize];//Í·ÏÎ
-	char bopname[strsize];//ÃØÃÜĞÕÃû
-	int preference;//³ÉÔ±Æ«ºÃ
+	char fullname[strsize];//ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½
+	char title[strsize];//Í·ï¿½ï¿½
+	char bopname[strsize];//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int preference;//ï¿½ï¿½Ô±Æ«ï¿½ï¿½
 };
  
-//²Ëµ¥ÏÔÊ¾
+//ï¿½Ëµï¿½ï¿½ï¿½Ê¾
 void caidan_show()
 {
 	cout << "a.display by name\t" << "b. display by title" << endl;
@@ -19,13 +19,13 @@ void caidan_show()
 	cout << "q. quit" << endl;
 }
  
-//new¶¯Ì¬´´½¨³ÉÔ±Êı×é£¨ÊäÈëĞÅÏ¢£©
+//newï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½é£¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½
 bop* creat(int people) 
 {
-	bop* p = new bop[people];//´´½¨´óĞ¡ÎªPeopleµÄbop³ÉÔ±Êı×é
-	for (int i = 0; i < people; i++)//¸øÃ¿¸ö³ÉÔ±¸³Öµ
+	bop* p = new bop[people];//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¡ÎªPeopleï¿½ï¿½bopï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½
+	for (int i = 0; i < people; i++)//ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Öµ
 	{
-		cout << "ÇëÊäÈëµÚ" << i + 1 << "¸öÈËµÄĞÅÏ¢£º" << endl;
+		cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" << i + 1 << "ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ï¢ï¿½ï¿½" << endl;
 		cout << "fullname\t: ";
 		cin >> p[i].fullname;
 		cout << "title\t: ";
@@ -39,8 +39,8 @@ bop* creat(int people)
 	return p;
 }
  
-//preferrenceº¯ÊıÊä³ö
-//Èç¹ûpreference·ûºÏ ÔòÊä³öÏàÓ¦µÄÃû³Æ
+//preferrenceï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½preferenceï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 void Preferrence(bop x)
 {
 	switch (x.preference)
@@ -51,20 +51,20 @@ void Preferrence(bop x)
 	}
 }
  
-//Ö÷º¯Êı
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 int main()
 {
 	int n,count=0;
 	char choose;
-	cout << "ÊäÈëÓĞ¶àÉÙ³ÉÔ±ĞèÒªÌîĞ´ĞÅÏ¢£º ";
+	cout << "ï¿½ï¿½ï¿½ï¿½ï¿½Ğ¶ï¿½ï¿½Ù³ï¿½Ô±ï¿½ï¿½Òªï¿½ï¿½Ğ´ï¿½ï¿½Ï¢ï¿½ï¿½ ";
 	cin >> n;
 	bop* bopmember = creat(n);
 	caidan_show();
-	cout << "Enter your choice: ";//µÚÒ»±éÑ­»·Ö´ĞĞÕâ¸ö
+	cout << "Enter your choice: ";//ï¿½ï¿½Ò»ï¿½ï¿½Ñ­ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½
 	cin >> choose;
 	while(1)
 	{
-		while (count++)//µÚÒ»±é²»Ö´ĞĞ next choice ËùÒÔÔÚÕâĞ´¸öÑ­»·
+		while (count++)//ï¿½ï¿½Ò»ï¿½é²»Ö´ï¿½ï¿½ next choice ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ´ï¿½ï¿½Ñ­ï¿½ï¿½
 		{
 			cout << "Next choice: ";
 			cin >> choose;
