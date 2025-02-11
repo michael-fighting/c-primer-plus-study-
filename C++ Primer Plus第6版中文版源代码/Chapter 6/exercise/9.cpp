@@ -1,9 +1,22 @@
 #include<stdio.h>
 #include<iostream>
 #include<vector>
+#include<fstream>
+#include<cstdlib>
 using namespace std;
+const int SIZE = 60;
+
 
 int main(){
+    char filename[SIZE];
+    ifstream inFile;
+    cout << "enter name of data file: ";
+    cin.getline(filename, SIZE);
+    inFile.open(filename);
+    if (!inFile.is_open()){
+        cout << "Could not open the file ";
+        exit(EXIT_FAILURE);
+    }
     vector<string> donors;
     vector<string> nondonors; 
     int number;
@@ -13,16 +26,15 @@ int main(){
         string name;
         double cash;
     };
-    cout << "请输入捐赠者数目";
-    cin >> number;
+    inFile >> number;
+    inFile.ignore();
     Grand* arr = new Grand[number];
     for (int i = 0; i < number; i++)
     {
         /* code */
-        cout << "请输入第" << i << "个捐赠者的姓名";
-        cin >> arr[i].name;
-        cout << "请输入第" << i << "个捐赠者的金额";
-        cin >> arr[i].cash;
+        getline(inFile, arr[i].name);
+        inFile >> arr[i].cash;
+        inFile.ignore();
     }
     while (number > 0){
         if (arr[number-1].cash > 10000){
