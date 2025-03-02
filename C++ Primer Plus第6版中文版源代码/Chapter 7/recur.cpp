@@ -12,8 +12,8 @@ int main()
 void countdown(int n)
 {
     using namespace std;
-    cout << "Counting down ... " << n << endl;
+    cout << "Counting down ... " << n << &n << endl;
     if (n > 0)
         countdown(n-1);     // function calls itself
-    cout << n << ": Kaboom!\n";
+    cout << n << &n << ": Kaboom!\n";
 }
