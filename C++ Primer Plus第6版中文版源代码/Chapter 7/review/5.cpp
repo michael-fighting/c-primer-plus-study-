@@ -7,6 +7,6 @@ void max(const double arr[], int len){
             res = arr[i];
         }
     }
-    
-
+    char * str;
+    string;
 }
